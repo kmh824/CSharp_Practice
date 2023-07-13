@@ -26,13 +26,18 @@ Console.Write(@"c:\invoices\app.exe -j");
 */
 
 //리터럴 문자열과 변수 연결
+
 String greeting = "hello";
 String firstName = "Bob";
-Console.WriteLine(greeting + " " + firstName);
+Console.WriteLine(greeting + " " + firstName + "!");
 
+//string interpolation
+String message = $"{greeting} {firstName}!";
+Console.WriteLine(message);
 
-
-
+int version = 11;
+String updateText = "update to Windows";
+Console.WriteLine($"{updateText} {version}");
 /*
 Random dice = new Random();
 int roll = dice.Next(1, 7);
