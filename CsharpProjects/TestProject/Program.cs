@@ -45,8 +45,6 @@ Console.WriteLine($@"View English output:
     c:\Exercise\{projectName}\data.txt");
 */
 
-
-
 /*
 Random dice = new Random();
 int roll = dice.Next(1, 7);
