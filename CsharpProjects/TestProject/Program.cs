@@ -1,4 +1,5 @@
-﻿//리터럴 및 변수 값을 사용하여 데이터 저장 및 검색
+﻿using System;
+//리터럴 및 변수 값을 사용하여 데이터 저장 및 검색
 /*
 var Name = "Bob";
 var Integer = 3;
@@ -45,12 +46,9 @@ Console.WriteLine($@"View English output:
     c:\Exercise\{projectName}\data.txt");
 */
 
+//오버로드된 메서드
 /*
-Random dice = new Random();
-int roll = dice.Next(1, 7);
-Console.WriteLine(roll);
-
-Random dice = new Random();
+Random dice = new Random(); //클래스 인스턴스 만들기
 
 int Roll1 = dice.Next();
 int Roll2 = dice.Next(11);
@@ -60,3 +58,23 @@ Console.WriteLine($"first number is {Roll1}");
 Console.WriteLine($"second number is {Roll2}");
 Console.WriteLine($"third number is {Roll3}");
 */
+
+//더 큰 수 찾기
+/*
+int firstValue = 500;
+int secondValue = 600;
+int largerValue;
+
+largerValue = Math.Max(firstValue, secondValue);
+Console.WriteLine(largerValue);
+*/
+
+Random dice = new Random();
+int roll1 = dice.Next(1, 7);
+int roll2 = dice.Next(1, 7);
+int roll3 = dice.Next(1, 7);
+
+int total = roll1 + roll2 + roll3;
+
+Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total}");
+
