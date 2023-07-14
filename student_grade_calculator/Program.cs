@@ -16,9 +16,9 @@ public class ScoreAverage
     {
         decimal avg = 0;
         int sum = 0;
-        for(int i = 0; i < 5; i++)
+        foreach(int n in name)
         {
-            sum += name[i];
+            sum += n;
         }
         avg = (decimal)sum / StudentInfor.currentAssignments;
         return avg;

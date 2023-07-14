@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YTE9Py9NI1V2NDMe2mI5YB7AUbVjLDKm3KvkM5TKOv3Jv7CaKApKmaSYUfXyN1bCNDohBQHxSgK7TeLSrDUIjA==",
+  "dgSpecHash": "VIunvrqORJDBC2ogdTk1Tk1rno67DguaM3zeIfGxoqg0SZ42oWdIsrjPA4q0Q0CtHlogy5UHtMXwZC1bLaW5oA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hyuk\\Desktop\\student_grade_calculator\\student_grade_calculator.csproj",
+  "projectFilePath": "C:\\Users\\hyuk\\Desktop\\CSharp_Practice\\student_grade_calculator\\student_grade_calculator.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

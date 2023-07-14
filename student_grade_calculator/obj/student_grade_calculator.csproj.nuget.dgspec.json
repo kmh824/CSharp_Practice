@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hyuk\\Desktop\\student_grade_calculator\\student_grade_calculator.csproj": {}
+    "C:\\Users\\hyuk\\Desktop\\CSharp_Practice\\student_grade_calculator\\student_grade_calculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hyuk\\Desktop\\student_grade_calculator\\student_grade_calculator.csproj": {
+    "C:\\Users\\hyuk\\Desktop\\CSharp_Practice\\student_grade_calculator\\student_grade_calculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hyuk\\Desktop\\student_grade_calculator\\student_grade_calculator.csproj",
+        "projectUniqueName": "C:\\Users\\hyuk\\Desktop\\CSharp_Practice\\student_grade_calculator\\student_grade_calculator.csproj",
         "projectName": "student_grade_calculator",
-        "projectPath": "C:\\Users\\hyuk\\Desktop\\student_grade_calculator\\student_grade_calculator.csproj",
+        "projectPath": "C:\\Users\\hyuk\\Desktop\\CSharp_Practice\\student_grade_calculator\\student_grade_calculator.csproj",
         "packagesPath": "C:\\Users\\hyuk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hyuk\\Desktop\\student_grade_calculator\\obj\\",
+        "outputPath": "C:\\Users\\hyuk\\Desktop\\CSharp_Practice\\student_grade_calculator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hyuk\\AppData\\Roaming\\NuGet\\NuGet.Config"
