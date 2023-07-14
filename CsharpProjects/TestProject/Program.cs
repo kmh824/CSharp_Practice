@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 //리터럴 및 변수 값을 사용하여 데이터 저장 및 검색
 /*
 var Name = "Bob";
@@ -92,5 +92,18 @@ current score: {total}");
 }
 if (total >= 15) Console.WriteLine("You win!");
 else Console.WriteLine("Sorry, You lose.");
+*/
+
+//foreach문
+/*
+String[] orderIDs = {"B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179"};
+
+foreach(String orderID in orderIDs)
+{
+    if(orderID.StartsWith('B'))
+    {
+        Console.WriteLine(orderID);
+    }
+}
 */
 
