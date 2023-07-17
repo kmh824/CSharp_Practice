@@ -1,17 +1,10 @@
 ﻿using System;
-public class StudentInfor
+
+
+public class Average
 {
-    public static int currentAssignments = 5;
+    int currentAssignments = 5;
 
-    public int[] sophia = { 93, 87, 98, 95, 100 };
-    public int[] nicolas = { 80, 83, 82, 88, 85 };
-    public int[] zahirah = { 84, 96, 73, 85, 79 };
-    public int[] jeong = { 90, 92, 98, 100, 97 };
-
-}
-
-public class ScoreAverage
-{
     public decimal Avg(int[] name)
     {
         decimal avg = 0;
@@ -20,42 +13,76 @@ public class ScoreAverage
         {
             sum += n;
         }
-        avg = (decimal)sum / StudentInfor.currentAssignments;
+        avg = (decimal)sum / currentAssignments;
         return avg;
     }
 }
 
 public class StudentGrade
 {
-    public char stdGrade(decimal scAvg)
+    public string studentGrade(decimal average)
     {
-        if (scAvg >= 70 && scAvg < 80) return 'C';
-        else if (scAvg >= 80 && scAvg < 90) return 'B';
-        else if (scAvg >= 90 && scAvg < 100) return 'A';
-        else return 'F';
+        if (average > 96 && average <= 100) return "A+";
+        else if (average > 92 && average <= 96) return "A";
+        else if (average > 89 && average <= 92) return "A-";
+        else if (average > 86 && average <= 89) return "B+";
+        else if (average > 82 && average <= 86) return "B";
+        else if (average > 79 && average <= 82) return "B-";
+        else if (average > 76 && average <= 79) return "C+";
+        else if (average > 72 && average <= 76) return "C";
+        else if (average > 69 && average <= 72) return "C-";
+        else if (average > 66 && average <= 69) return "D+";
+        else if (average > 62 && average <= 66) return "D";
+        else if (average > 59 && average <= 62) return "D-";
+        else return "F";
     }
 }
 public class Program
 {
     public static void Main(String[] args)
     {
-        StudentInfor std = new StudentInfor();
-        ScoreAverage avg = new ScoreAverage();
+        Average average = new Average();
         StudentGrade grade = new StudentGrade();
 
-        char sophiaGrade = grade.stdGrade(avg.Avg(std.sophia));
-        char nicolasGrade = grade.stdGrade(avg.Avg(std.nicolas));
-        char zahirahGrade = grade.stdGrade(avg.Avg(std.zahirah));
-        char jeongGrade = grade.stdGrade(avg.Avg(std.jeong));
+        string[] studentName = { "sophia", "nicolas", "zahirah", "jeong" };
+
+        int[] sophia = { 93, 87, 98, 95, 100 };
+        int[] nicolas = { 80, 83, 82, 88, 85 };
+        int[] zahirah = { 84, 96, 73, 85, 79 };
+        int[] jeong = { 90, 92, 98, 100, 97 };
+
+        decimal studentScore = 0;
+        string studentGrade = "";
 
         Console.WriteLine("Student\t\tGrade\n");
-        Console.WriteLine("Sophia:\t\t" + avg.Avg(std.sophia) + "\t" + sophiaGrade);
-        Console.WriteLine("Sophia:\t\t" + avg.Avg(std.nicolas) + "\t" + nicolasGrade);
-        Console.WriteLine("Sophia:\t\t" + avg.Avg(std.zahirah) + "\t" + zahirahGrade);
-        Console.WriteLine("Sophia:\t\t" + avg.Avg(std.jeong) + "\t" + jeongGrade);
+
+        foreach (string name in studentName)
+        {
+            if (name == "sophia")
+            {
+                studentScore = average.Avg(sophia);
+                studentGrade = grade.studentGrade(studentScore);
+            }
+            else if (name == "nicolas")
+            {
+                studentScore = average.Avg(nicolas);
+                studentGrade = grade.studentGrade(studentScore);
+            }
+            else if (name == "zahirah")
+            {
+                studentScore = average.Avg(zahirah);
+                studentGrade = grade.studentGrade(studentScore);
+            }
+            else if (name == "jeong")
+            {
+                studentScore = average.Avg(jeong);
+                studentGrade = grade.studentGrade(studentScore);
+            }
+            
+            Console.WriteLine(@$"{name}:        {studentScore}  {studentGrade}");
+        }
 
         Console.WriteLine("Press the Enter key to continue");
         Console.ReadLine();
     }
 }
-
