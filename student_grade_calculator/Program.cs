@@ -1,6 +1,7 @@
 ﻿using System;
 
 
+// This class calcuatre the score of a student
 public class StudentScore
 {
     static int currentAssignments = 5;
@@ -14,7 +15,7 @@ public class StudentScore
         currentStudentExamScore = 0;
         currentStudentExtraCreditScore = 0;
         sumExtraCreditScores = 0;
-        decimal avg = 0;
+        decimal average = 0;
         int gradeAssignments = 0;
         decimal sumAssignmentScore = 0;
 
@@ -38,11 +39,12 @@ public class StudentScore
         sumExtraCreditScores = ((decimal)currentStudentExtraCreditScore / 10) / 5;
         currentStudentExtraCreditScore = (decimal)currentStudentExtraCreditScore / (gradeAssignments - currentAssignments);
 
-        avg = (decimal)sumAssignmentScore / currentAssignments;
-        return avg;
+        average = (decimal)sumAssignmentScore / currentAssignments;
+        return average;
     }
 }
 
+// This class calcuatre the grade of a student
 public class StudentGrade
 {
     public string studentGrade(decimal average)
