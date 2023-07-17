@@ -9,14 +9,14 @@ public class StudentScore
     public decimal currentStudentExtraCreditScore = 0;
     public decimal sumExtraCreditScores = 0;
     
-    public decimal Avg(int[] name)
+    public decimal calculateScore(int[] name)
     {
         currentStudentExamScore = 0;
         currentStudentExtraCreditScore = 0;
         sumExtraCreditScores = 0;
         decimal avg = 0;
         int gradeAssignments = 0;
-        int sumAssignmentScore = 0;
+        decimal sumAssignmentScore = 0;
 
         foreach (int n in name)
         {
@@ -32,7 +32,7 @@ public class StudentScore
             }
             else {
                 currentStudentExtraCreditScore += n;
-                sumAssignmentScore += (n / 10);
+                sumAssignmentScore += ((decimal)n / 10);
             }
         }
         sumExtraCreditScores = ((decimal)currentStudentExtraCreditScore / 10) / 5;
@@ -89,42 +89,42 @@ public class Program
         {
             if (name == "sophia")
             {
-                studentScore = score.Avg(sophiaScore);
+                studentScore = score.calculateScore(sophiaScore);
                 studentGrade = grade.studentGrade(studentScore);
             }
             else if (name == "nicolas")
             {
-                studentScore = score.Avg(nicolasScore);
+                studentScore = score.calculateScore(nicolasScore);
                 studentGrade = grade.studentGrade(studentScore);
             }
             else if (name == "zahirah")
             {
-                studentScore = score.Avg(zahirahScore);
+                studentScore = score.calculateScore(zahirahScore);
                 studentGrade = grade.studentGrade(studentScore);
             }
             else if (name == "jeong")
             {
-                studentScore = score.Avg(jeongScore);
+                studentScore = score.calculateScore(jeongScore);
                 studentGrade = grade.studentGrade(studentScore);
             }
             else if (name == "Becky")
             {
-                studentScore = score.Avg(beckyScores);
+                studentScore = score.calculateScore(beckyScores);
                 studentGrade = grade.studentGrade(studentScore);
             }
             else if (name == "Chris")
             {
-                studentScore = score.Avg(chrisScores);
+                studentScore = score.calculateScore(chrisScores);
                 studentGrade = grade.studentGrade(studentScore);
             }
             else if (name == "Eric")
             {
-                studentScore = score.Avg(ericScores);
+                studentScore = score.calculateScore(ericScores);
                 studentGrade = grade.studentGrade(studentScore);
             }
             else if (name == "Gregor")
             {
-                studentScore = score.Avg(gregorScores);
+                studentScore = score.calculateScore(gregorScores);
                 studentGrade = grade.studentGrade(studentScore);
             }
 
