@@ -1,12 +1,19 @@
 ﻿using System;
 
 
-public class Average
+public class StudentScore
 {
     static int currentAssignments = 5;
     int gradeAssignments = 0;
+    public decimal currentStudentExamScore = 0;
+    public decimal currentStudentExtraCreditScore = 0;
+    public decimal sumExtraCreditScores = 0;
+    
     public decimal Avg(int[] name)
     {
+        currentStudentExamScore = 0;
+        currentStudentExtraCreditScore = 0;
+        sumExtraCreditScores = 0;
         decimal avg = 0;
         int gradeAssignments = 0;
         int sumAssignmentScore = 0;
@@ -15,11 +22,22 @@ public class Average
         {
             gradeAssignments++;
 
-            if (gradeAssignments <= currentAssignments) sumAssignmentScore += n;
-            else sumAssignmentScore += n/10;
-            
+            if (gradeAssignments <= currentAssignments)
+            {
+                sumAssignmentScore += n;
+                if (gradeAssignments == currentAssignments)
+                {
+                    currentStudentExamScore += ((decimal)sumAssignmentScore / currentAssignments);
+                }
+            }
+            else {
+                currentStudentExtraCreditScore += n;
+                sumAssignmentScore += (n / 10);
+            }
         }
-        
+        sumExtraCreditScores = ((decimal)currentStudentExtraCreditScore / 10) / 5;
+        currentStudentExtraCreditScore = (decimal)currentStudentExtraCreditScore / (gradeAssignments - currentAssignments);
+
         avg = (decimal)sumAssignmentScore / currentAssignments;
         return avg;
     }
@@ -48,69 +66,69 @@ public class Program
 {
     public static void Main(String[] args)
     {
-        Average average = new Average();
+        StudentScore score = new StudentScore();
         StudentGrade grade = new StudentGrade();
 
-        string[] studentName = { "sophia", "nicolas", "zahirah", "jeong", "Becky", "Chris", "Eric", "Gregor"};
+        string[] studentName = { "sophia", "nicolas", "zahirah", "jeong", "Becky", "Chris", "Eric", "Gregor" };
 
-        int[] sophiaScore = new int[]{ 90, 86, 87, 98, 100, 94, 90 };
-        int[] nicolasScore = new int[]{ 80, 83, 82, 88, 85, 93, 92 };
-        int[] zahirahScore = new int[]{ 84, 96, 73, 85, 79, 100, 93 };
-        int[] jeongScore = new int[]{ 90, 92, 98, 100, 97, 92, 100 };
+        int[] sophiaScore = new int[] { 90, 86, 87, 98, 100, 94, 90 };
+        int[] nicolasScore = new int[] { 92, 89, 81, 96, 90, 89 };
+        int[] zahirahScore = new int[] { 90, 85, 87, 98, 68, 89, 89, 89 };
+        int[] jeongScore = new int[] { 90, 95, 87, 88, 96, 96 };
         int[] beckyScores = new int[] { 92, 91, 90, 91, 92, 92, 92 };
         int[] chrisScores = new int[] { 84, 86, 88, 90, 92, 94, 96, 98 };
         int[] ericScores = new int[] { 80, 90, 100, 80, 90, 100, 80, 90 };
-        int[] gregorScores = new int[] { 91, 91, 91, 91, 91, 91, 91 }; 
+        int[] gregorScores = new int[] { 91, 91, 91, 91, 91, 91, 91 };
 
         decimal studentScore = 0;
         string studentGrade = "";
 
-        Console.WriteLine("Student\t\tGrade\n");
+        Console.WriteLine("Student\t\tExam Score\tOverall Grade\tExtra Credit\n");
 
         foreach (string name in studentName)
         {
             if (name == "sophia")
             {
-                studentScore = average.Avg(sophiaScore);
+                studentScore = score.Avg(sophiaScore);
                 studentGrade = grade.studentGrade(studentScore);
             }
             else if (name == "nicolas")
             {
-                studentScore = average.Avg(nicolasScore);
+                studentScore = score.Avg(nicolasScore);
                 studentGrade = grade.studentGrade(studentScore);
             }
             else if (name == "zahirah")
             {
-                studentScore = average.Avg(zahirahScore);
+                studentScore = score.Avg(zahirahScore);
                 studentGrade = grade.studentGrade(studentScore);
             }
             else if (name == "jeong")
             {
-                studentScore = average.Avg(jeongScore);
+                studentScore = score.Avg(jeongScore);
                 studentGrade = grade.studentGrade(studentScore);
             }
             else if (name == "Becky")
             {
-                studentScore = average.Avg(beckyScores);
+                studentScore = score.Avg(beckyScores);
                 studentGrade = grade.studentGrade(studentScore);
             }
             else if (name == "Chris")
             {
-                studentScore = average.Avg(chrisScores);
+                studentScore = score.Avg(chrisScores);
                 studentGrade = grade.studentGrade(studentScore);
             }
             else if (name == "Eric")
             {
-                studentScore = average.Avg(ericScores);
+                studentScore = score.Avg(ericScores);
                 studentGrade = grade.studentGrade(studentScore);
             }
             else if (name == "Gregor")
             {
-                studentScore = average.Avg(gregorScores);
+                studentScore = score.Avg(gregorScores);
                 studentGrade = grade.studentGrade(studentScore);
             }
-            
-            Console.WriteLine($"{name}\t\t{studentScore}\t{studentGrade}");
+
+            Console.WriteLine($"{name}\t\t{score.currentStudentExamScore}\t\t{studentScore}\t{studentGrade}\t{score.currentStudentExtraCreditScore}\t{score.sumExtraCreditScores}");
         }
 
         Console.WriteLine("Press the Enter key to continue");
