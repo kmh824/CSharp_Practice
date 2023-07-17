@@ -117,7 +117,7 @@ for (int i = 0; i < orderIDs.Length; i++)
     // Convert the random value into a char, then a string
     string prefix = Convert.ToChar(prefixValue).ToString();
     // Create a random number, pad with zeroes
-    string suffix = random.Next(1, 1000).ToString("000");
+    string suffix = random.Next(1, 1000).ToString();
     // Combine the prefix and suffix together, then assign to current OrderID
     orderIDs[i] = prefix + suffix;
 }
