@@ -16,7 +16,7 @@ public class ScoreAverage
     {
         decimal avg = 0;
         int sum = 0;
-        foreach(int n in name)
+        foreach (int n in name)
         {
             sum += n;
         }
@@ -28,10 +28,10 @@ public class ScoreAverage
 public class StudentGrade
 {
     public char stdGrade(decimal scAvg)
-    {       
-        if(scAvg >=70 && scAvg < 80)return 'C';
-        else if(scAvg >=80 && scAvg < 90)return 'B';
-        else if(scAvg >=90 && scAvg < 100)return 'A';
+    {
+        if (scAvg >= 70 && scAvg < 80) return 'C';
+        else if (scAvg >= 80 && scAvg < 90) return 'B';
+        else if (scAvg >= 90 && scAvg < 100) return 'A';
         else return 'F';
     }
 }
@@ -41,17 +41,21 @@ public class Program
     {
         StudentInfor std = new StudentInfor();
         ScoreAverage avg = new ScoreAverage();
-        StudentGrade grad = new StudentGrade();
+        StudentGrade grade = new StudentGrade();
 
-        char sophiaGrade = grad.stdGrade(avg.Avg(std.sophia));
-        char nicolasGrade = grad.stdGrade(avg.Avg(std.nicolas));
-        char zahirahGrade = grad.stdGrade(avg.Avg(std.zahirah));
-        char jeongGrade = grad.stdGrade(avg.Avg(std.jeong));
-        
-        Console.WriteLine("Sophia: " + sophiaGrade);
-        Console.WriteLine("Nicolas: " + nicolasGrade);
-        Console.WriteLine("Zahirah: " + zahirahGrade);
-        Console.WriteLine("Jeong: " + jeongGrade);
+        char sophiaGrade = grade.stdGrade(avg.Avg(std.sophia));
+        char nicolasGrade = grade.stdGrade(avg.Avg(std.nicolas));
+        char zahirahGrade = grade.stdGrade(avg.Avg(std.zahirah));
+        char jeongGrade = grade.stdGrade(avg.Avg(std.jeong));
+
+        Console.WriteLine("Student\t\tGrade\n");
+        Console.WriteLine("Sophia:\t\t" + avg.Avg(std.sophia) + "\t" + sophiaGrade);
+        Console.WriteLine("Sophia:\t\t" + avg.Avg(std.nicolas) + "\t" + nicolasGrade);
+        Console.WriteLine("Sophia:\t\t" + avg.Avg(std.zahirah) + "\t" + zahirahGrade);
+        Console.WriteLine("Sophia:\t\t" + avg.Avg(std.jeong) + "\t" + jeongGrade);
+
+        Console.WriteLine("Press the Enter key to continue");
+        Console.ReadLine();
     }
 }
 
