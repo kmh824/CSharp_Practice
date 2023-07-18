@@ -161,9 +161,36 @@ Console.WriteLine(newMessage);
 Console.WriteLine($"'o' appears {letterCount} times.");
 */
 
+
+//Boolean
+/*
 Console.WriteLine("a" == "A");
 Console.WriteLine("a" == "a");
 Console.WriteLine(1 == 2);
 
-string myValue = "a";
-Console.WriteLine(myValue == "a");
+string myValue1 = "a";
+Console.WriteLine(myValue1 == "a");
+*/
+/*
+Console.WriteLine("a" != "a");
+Console.WriteLine("a" != "A");
+Console.WriteLine(1 != 2);
+
+string myValue2 = "a";
+Console.WriteLine(myValue2 != "a");
+
+Console.WriteLine(1 > 2);
+Console.WriteLine(1 < 2);
+Console.WriteLine(1 >= 1);
+Console.WriteLine(1 <= 1);
+*/
+
+string pangram = "The quick brown fox jumps over the lazy dog.";
+Console.WriteLine(pangram.Contains("fox"));
+Console.WriteLine(!pangram.Contains("cow"));
+
+int saleAmount = 1001;
+Console.WriteLine($"Discount: {(saleAmount > 1000 ? 100 : 50)}");
+
+Random coin = new Random();
+Console.WriteLine(coin.Next(0, 2) == 0 ? "heard" : "tails");
