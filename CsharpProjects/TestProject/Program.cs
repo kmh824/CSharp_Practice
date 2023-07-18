@@ -161,3 +161,9 @@ Console.WriteLine(newMessage);
 Console.WriteLine($"'o' appears {letterCount} times.");
 */
 
+Console.WriteLine("a" == "A");
+Console.WriteLine("a" == "a");
+Console.WriteLine(1 == 2);
+
+string myValue = "a";
+Console.WriteLine(myValue == "a");
