@@ -195,6 +195,7 @@ Console.WriteLine($"Discount: {(saleAmount > 1000 ? 100 : 50)}");
 Random coin = new Random();
 Console.WriteLine((coin.Next(0, 2) == 0) ? "heard" : "tails");
 */
+/*
 string permission = "Admin|Manager";
 int level = 56 ;
 
@@ -209,3 +210,31 @@ else if (permission.Contains("Manager"))
     else Console.WriteLine("You do not have sufficient privileges.");
 }
 else Console.WriteLine("You do not have sufficient privileges.");
+*/
+
+//switch 문
+int employeeLevel = 300;
+string employeeName = "John Smith";
+
+string title = "";
+
+switch (employeeLevel)
+{
+    case 100:
+        title = "Junior Associate";
+        break;
+    case 200:
+        title = "Senior Associate";
+        break;
+    case 300:
+        title = "Manager";
+        break;
+    case 400:
+        title = "Senior Manager";
+        break;
+    default:
+        title = "Associate";
+        break;
+}
+
+Console.WriteLine($"{employeeName}, {title}");
