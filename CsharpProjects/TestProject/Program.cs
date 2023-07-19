@@ -238,7 +238,7 @@ switch (employeeLevel)
 
 Console.WriteLine($"{employeeName}, {title}");
 */
-
+/*
 string sku = "01-MN-L";
 
 string[] product = sku.Split('-');
@@ -290,3 +290,26 @@ switch (product[2])
         break;
 }
 Console.WriteLine($"Product: {size} {color} {type}");
+*/
+
+//FizzBuzz 과제
+/*
+for (int i = 1; i <= 100; i++)
+{
+    if ((i % 3 == 0) && (i % 5 == 0))
+    {
+        Console.WriteLine($"{i} - FizzBuzz");
+    }
+    else if (i % 3 == 0)
+    {
+        Console.WriteLine($"{i} - Fizz");
+    }
+    else if (i % 5 == 0)
+    {
+        Console.WriteLine($"{i} - Buzz");
+    }
+    
+    else Console.WriteLine(i);
+}
+*/
+
