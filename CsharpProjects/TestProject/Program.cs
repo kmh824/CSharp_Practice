@@ -380,7 +380,7 @@ do
 } while (validNumber == false);
 Console.WriteLine($"Your input value ({numValue}) has been accepted.");
 */
-
+/*
 string? readResult;
 string roleName = "";
 bool validEntry = false;
@@ -407,3 +407,18 @@ do
 
 Console.WriteLine($"Your input value ({roleName}) has been accepted.");
 readResult = Console.ReadLine();
+*/
+
+string[] myStrings = new string[2] { "I like pizza. I like roast chicken. I like salad", "I like all three of the menu choices" };
+int periodLocation = 0;
+string myString;
+
+
+for (int i = 0; i < myStrings.Length; i++)
+{
+    myString = myStrings[i];
+  
+    periodLocation = myString.IndexOf(".");
+
+    Console.WriteLine(periodLocation);
+}
