@@ -313,6 +313,8 @@ for (int i = 1; i <= 100; i++)
 }
 */
 
+//do - while
+/*
 Random random = new Random();
 int current = 0;
 
@@ -321,3 +323,29 @@ do
     current = random.Next(1, 11);
     Console.WriteLine(current);
 } while (current != 7);
+*/
+/*
+int hero = 10, monster = 10;
+int heroAttack = 0;
+int monsterAttack = 0;
+Random attack = new Random();
+
+do
+{
+    heroAttack = attack.Next(1, 11);
+    monster -= heroAttack;
+    Console.WriteLine("The hero attacks the monster!");
+    Console.WriteLine($"Monster was damaged and lost {heroAttack} health and now has {monster} health.\n");
+    
+    if (monster <= 0) continue;
+
+    monsterAttack = attack.Next(1, 11);
+    hero -= monsterAttack;
+    Console.WriteLine("The monster attacks the hero!");
+    Console.WriteLine($"hero was damaged and lost {monsterAttack} health and now has {hero} health.\n");
+
+} while (hero > 0 && monster > 0);
+
+Console.WriteLine(hero > monster ? "Hero Wins!" : "Monster Wins!");
+*/
+
