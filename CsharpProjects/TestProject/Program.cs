@@ -417,8 +417,22 @@ string myString;
 for (int i = 0; i < myStrings.Length; i++)
 {
     myString = myStrings[i];
-  
     periodLocation = myString.IndexOf(".");
 
-    Console.WriteLine(periodLocation);
+    string mySentence;
+
+    while (periodLocation != -1)
+    {
+        mySentence = myString.Remove(periodLocation);
+
+        myString = myString.Substring(periodLocation + 1);
+
+        myString = myString.TrimStart();
+
+        periodLocation = myString.IndexOf(".");
+
+        Console.WriteLine(mySentence);
+    } 
+    mySentence = myString.Trim();
+    Console.WriteLine(mySentence);
 }
