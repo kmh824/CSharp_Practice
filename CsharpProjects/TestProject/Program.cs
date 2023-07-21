@@ -348,4 +348,49 @@ do
 
 Console.WriteLine(hero > monster ? "Hero Wins!" : "Monster Wins!");
 */
+/*
+string? readResult;
+string valueEntered = "";
+int numValue = 0;
+bool validNumber = false;
+do
+{
+    Console.WriteLine("Enter an integer value between 5 and 10");
+    readResult = Console.ReadLine();
 
+    if (readResult != null)
+    {
+        valueEntered = readResult;
+    }
+
+    if (int.TryParse(valueEntered, out numValue))
+    {
+        numValue = int.Parse(valueEntered);
+        if (numValue > 5 && numValue < 10)
+        {
+            validNumber = true;
+            continue;
+        }
+        else Console.WriteLine($"You entered {numValue}. Please enter a number between 5 and 10.");
+    }
+
+    else Console.WriteLine("Sorry, you entered an invalid number, please try again");
+
+} while (validNumber == false);
+Console.WriteLine($"Your input value ({numValue}) has been accepted.");
+*/
+
+string permission = "administrator|aanager|user";
+string? readResult;
+string roleName = "";
+bool validEntry = false;
+do
+{
+    Console.WriteLine("Enter your role name (Administrator, Manager, or User)");
+    readResult = Console.ReadLine();
+
+    if (readResult != null){
+        roleName = readResult;
+    }
+    
+} while (true);
