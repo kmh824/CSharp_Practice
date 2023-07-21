@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hyuk\\Desktop\\Guided-project-branching-looping-CSharp-main\\GuidedProject\\Starter\\Starter.csproj",
+      "projectUniqueName": "C:\\Users\\hyuk\\Desktop\\CSharp_Practice\\Starter\\Starter.csproj",
       "projectName": "Starter",
-      "projectPath": "C:\\Users\\hyuk\\Desktop\\Guided-project-branching-looping-CSharp-main\\GuidedProject\\Starter\\Starter.csproj",
+      "projectPath": "C:\\Users\\hyuk\\Desktop\\CSharp_Practice\\Starter\\Starter.csproj",
       "packagesPath": "C:\\Users\\hyuk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hyuk\\Desktop\\Guided-project-branching-looping-CSharp-main\\GuidedProject\\Starter\\obj\\",
+      "outputPath": "C:\\Users\\hyuk\\Desktop\\CSharp_Practice\\Starter\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hyuk\\AppData\\Roaming\\NuGet\\NuGet.Config"
