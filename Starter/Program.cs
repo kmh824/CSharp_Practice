@@ -168,8 +168,11 @@ do
                 Console.WriteLine("Press the Enter key to continue.");
                 readResult = Console.ReadLine();
             }
-            Console.WriteLine("Press the Enter key to continue.");
-            readResult = Console.ReadLine();
+            else
+            {
+                Console.WriteLine("Press the Enter key to continue.");
+                readResult = Console.ReadLine();
+            }
             break;
 
         case "3":
