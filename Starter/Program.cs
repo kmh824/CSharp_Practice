@@ -244,7 +244,8 @@ do
                 
                 // increment petCount (the array is zero-based, so we increment the counter after adding to the array)
                 petCount = petCount + 1;
-
+ 
+ 
                 // check maxPet limit
                 if (petCount < maxPets)
                 {
