@@ -438,9 +438,64 @@ for (int i = 0; i < myStrings.Length; i++)
 */
 
 // 데이터 형식 캐스팅
-
+/*
 decimal myDecimal = 1.23456789m;
 float myFloat = (float)myDecimal;
 
 Console.WriteLine($"Decimal: {myDecimal}");
 Console.WriteLine($"Float  : {myFloat}");
+*/
+/*
+int first = 1;
+int second = 2;
+string message = first.ToString() + second.ToString();
+
+Console.WriteLine(message);
+*/
+/*
+string first = "5";
+string second = "7";
+int sum = int.Parse(first) + int.Parse(second);
+Console.WriteLine(sum);
+
+int result = Convert.ToInt32(first) * Convert.ToInt32(second);
+Console.WriteLine(result);
+*/
+/*
+string value = "102";
+int result = 0;
+if (int.TryParse(value, out result))
+{
+    Console.WriteLine($"Measurement: {result}");
+}
+else
+{
+    Console.WriteLine("Unable to report the measurement.");
+}
+Console.WriteLine($"Measurement (w/ offset): {50 + result}");
+*/
+
+// 문자열 배열 값을 문자열 및 정수로 결합하는 과제
+/*
+string[] values = { "12.3", "45", "ABC", "11", "DEF" };
+
+decimal total = 0;
+string message = "";
+
+foreach (var value in values)
+{
+    decimal number;
+    if (decimal.TryParse(value, out number))
+    {
+        total += number;
+    }
+    else 
+    {
+        message += value;
+    }
+}
+
+Console.WriteLine($"{total}\n{message}");
+*/
+
+// 수학 연산을 특정 숫자 형식으로 출력하는 과제
