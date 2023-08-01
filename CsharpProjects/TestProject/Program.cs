@@ -1,5 +1,4 @@
-﻿
-//리터럴 및 변수 값을 사용하여 데이터 저장 및 검색
+﻿// 리터럴 및 변수 값을 사용하여 데이터 저장 및 검색
 /*
 var Name = "Bob";
 var Integer = 3;
@@ -8,7 +7,7 @@ var Float = 34.4;
 Console.WriteLine($"Hello, {Name}! You have {Integer} in your inbox. The temperature is {Float} celsius");
  */
 
-//문자 이스케이프 시퀀스를 사용하여 출력 형식 지정
+// 문자 이스케이프 시퀀스를 사용하여 출력 형식 지정
 /*
 Console.WriteLine("Generating invoices for customer \"Contoso Corp\" ...\n");
 Console.WriteLine("Invoice: 1021\t\tComplete!");
@@ -26,7 +25,7 @@ Console.Write("\n\n\u65e5\u672c\u306e\u8acb\u6c42\u66f8\u3092\u751f\u6210\u3059\
 Console.Write(@"c:\invoices\app.exe -j");
 */
 
-//리터럴 문자열과 변수 연결
+// 리터럴 문자열과 변수 연결
 /*
 String greeting = "hello";
 String firstName = "Bob";
@@ -46,7 +45,7 @@ Console.WriteLine($@"View English output:
     c:\Exercise\{projectName}\data.txt");
 */
 
-//오버로드된 메서드
+// 오버로드된 메서드
 /*
 Random dice = new Random(); //클래스 인스턴스 만들기
 
@@ -59,7 +58,7 @@ Console.WriteLine($"second number is {Roll2}");
 Console.WriteLine($"third number is {Roll3}");
 */
 
-//더 큰 수 찾기
+// 더 큰 수 찾기
 /*
 int firstValue = 500;
 int secondValue = 600;
@@ -69,7 +68,7 @@ largerValue = Math.Max(firstValue, secondValue);
 Console.WriteLine(largerValue);
 */
 
-//주사위 게임
+// 주사위 게임
 /*
 Random dice = new Random();
 int roll1 = dice.Next(1, 7);
@@ -94,7 +93,7 @@ if (total >= 15) Console.WriteLine("You win!");
 else Console.WriteLine("Sorry, You lose.");
 */
 
-//foreach문
+// foreach문
 /*
 String[] orderIDs = {"B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179"};
 
@@ -162,7 +161,7 @@ Console.WriteLine($"'o' appears {letterCount} times.");
 */
 
 
-//Boolean
+// Boolean
 /*
 Console.WriteLine("a" == "A");
 Console.WriteLine("a" == "a");
@@ -212,7 +211,7 @@ else if (permission.Contains("Manager"))
 else Console.WriteLine("You do not have sufficient privileges.");
 */
 
-//switch 문
+// switch 문
 /*
 int employeeLevel = 100;
 string employeeName = "John Smith";
@@ -292,7 +291,7 @@ switch (product[2])
 Console.WriteLine($"Product: {size} {color} {type}");
 */
 
-//FizzBuzz 과제
+// FizzBuzz 과제
 /*
 for (int i = 1; i <= 100; i++)
 {
@@ -313,7 +312,7 @@ for (int i = 1; i <= 100; i++)
 }
 */
 
-//do - while
+// do - while
 /*
 Random random = new Random();
 int current = 0;
@@ -438,3 +437,4 @@ for (int i = 0; i < myStrings.Length; i++)
 }
 */
 
+// 데이터 형식 캐스팅
