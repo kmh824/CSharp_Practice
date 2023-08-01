@@ -438,3 +438,9 @@ for (int i = 0; i < myStrings.Length; i++)
 */
 
 // 데이터 형식 캐스팅
+
+decimal myDecimal = 1.23456789m;
+float myFloat = (float)myDecimal;
+
+Console.WriteLine($"Decimal: {myDecimal}");
+Console.WriteLine($"Float  : {myFloat}");
