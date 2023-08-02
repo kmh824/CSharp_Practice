@@ -542,10 +542,31 @@ Console.WriteLine($"double : {double.MinValue} to {double.MaxValue} (with ~15-17
 Console.WriteLine($"decimal: {decimal.MinValue} to {decimal.MaxValue} (with 28-29 digits of precision)");
 */
 
+// Array.Sort() 및 Array.Reversse()
+/*
 string[] pallets = { "B14", "A11", "B12", "A13" };
 
 Console.WriteLine("Sorted...");
 Array.Sort(pallets);
+foreach (var pallet in pallets)
+{
+    Console.WriteLine($"-- {pallet}");
+}
+
+Console.WriteLine("");
+Console.WriteLine("Reversed...");
+Array.Reverse(pallets);
+foreach (var pallet in pallets)
+{
+    Console.WriteLine($"-- {pallet}");
+}
+*/
+
+string[] pallets = { "B14", "A11", "B12", "A13" };
+Console.WriteLine("");
+
+Array.Clear(pallets, 0, 2);
+Console.WriteLine($"Clearing 2 ... count: {pallets.Length}");
 foreach (var pallet in pallets)
 {
     Console.WriteLine($"-- {pallet}");
