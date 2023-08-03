@@ -596,6 +596,8 @@ foreach (var pallet in pallets)
 }
 */
 
+// String.Join() 및 Split()
+/*
 string value = "abc123";
 char[] valueArray = value.ToCharArray();
 Array.Reverse(valueArray);
@@ -608,3 +610,22 @@ foreach (string item in items)
 {
     Console.WriteLine(item);
 }
+*/
+
+// 문장에서 단어를 되돌리는 과제
+
+string pangram = "The quick brown fox jumps over the lazy dog";
+
+string[] values = pangram.Split(' ');
+string[] results = new string[values.Length];
+int index = 0;
+
+for (int i = 0; i < values.Length; i ++)
+{
+    char[] letters = values[i].ToCharArray();
+    Array.Reverse(letters);
+    results[i] = new string(letters);
+}
+
+string result = String.Join(" ", results);
+Console.WriteLine(result);
