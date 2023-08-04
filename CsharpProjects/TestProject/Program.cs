@@ -613,7 +613,7 @@ foreach (string item in items)
 */
 
 // 문장에서 단어를 되돌리는 과제
-
+/*
 string pangram = "The quick brown fox jumps over the lazy dog";
 
 string[] values = pangram.Split(' ');
@@ -629,3 +629,11 @@ for (int i = 0; i < values.Length; i ++)
 
 string result = String.Join(" ", results);
 Console.WriteLine(result);
+*/
+
+string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
+Console.WriteLine(orderStream);
+string[] results = orderStream.Split();
+Array.Sort(results);
+
+Console.WriteLine(results);
