@@ -630,10 +630,28 @@ for (int i = 0; i < values.Length; i ++)
 string result = String.Join(" ", results);
 Console.WriteLine(result);
 */
-
+/*
 string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
-Console.WriteLine(orderStream);
-string[] results = orderStream.Split();
+
+string[] results = orderStream.Split(',');
 Array.Sort(results);
 
-Console.WriteLine(results);
+foreach (var result in results)
+{
+    if (result.Length != 4)
+    {
+        Console.WriteLine($"{result}\t\t error");
+    }
+    else{
+        Console.WriteLine(result);
+    }
+}
+*/
+
+int invoiceNumber = 1201;
+decimal productShares = 25.4568m;
+decimal subtotal = 2750.00m;
+decimal taxPercentage = .15825m;
+decimal total = 3185.19m;
+
+Console.WriteLine($"Invoice Number: {invoiceNumber}");
