@@ -729,7 +729,7 @@ openingPosition += openSpan.Length;
 int length = closingPosition - openingPosition;
 Console.WriteLine(message.Substring(openingPosition, length));
 */
-
+/*
 string message = "(What if) I have [different symbols] but every {open symbol} needs a [matching closing symbol]?";
 
 // The IndexOfAny() helper method requires a char array of characters. 
@@ -780,3 +780,32 @@ while (true)
     int length = closingPosition - openingPosition;
     Console.WriteLine(message.Substring(openingPosition, length));
 }
+*/
+
+//입력 문자열에서 데이터를 추출, 바꾸기 및 제거하는 과제
+/*
+const string input = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
+
+string quantity = "";
+string output = "";
+
+// Your work here
+int openIndex = input.IndexOf("<span>");
+int closeIndex = input.IndexOf('<', openIndex + 1 );
+openIndex += 6;
+
+int length = closeIndex - openIndex;
+quantity = input.Substring(openIndex, length);
+
+output = input.Replace("&trade;", "&reg;");
+
+openIndex = output.IndexOf("<div>");
+closeIndex = output.LastIndexOf('<');
+openIndex += 5;
+
+length = closeIndex - openIndex;
+output = output.Substring(openIndex, length);
+
+Console.WriteLine($"Quantity: {quantity}");
+Console.WriteLine($"Output: {output}");
+*/
