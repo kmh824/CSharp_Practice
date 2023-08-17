@@ -782,7 +782,7 @@ while (true)
 }
 */
 
-//입력 문자열에서 데이터를 추출, 바꾸기 및 제거하는 과제
+// 입력 문자열에서 데이터를 추출, 바꾸기 및 제거하는 과제
 /*
 const string input = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
 
@@ -810,3 +810,19 @@ Console.WriteLine($"Quantity: {quantity}");
 Console.WriteLine($"Output: {output}");
 */
 
+// 메서드 
+
+Console.WriteLine("Generating random numbers:");
+DisplayRandomNumbers();
+
+void DisplayRandomNumbers() 
+{
+    Random random = new Random();
+
+    for (int i = 0; i < 5; i++) 
+    {
+        Console.Write($"{random.Next(1, 100)} ");
+    }
+
+    Console.WriteLine();
+}
