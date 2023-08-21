@@ -1028,3 +1028,61 @@ void ShowRSVPs()
     }
 }
 */
+
+// 이메일 주소를 표시하는 메서드
+/*
+string[,] corporate =
+{
+    {"Robert", "Bavin"}, {"Simon", "Bright"},
+    {"Kim", "Sinclair"}, {"Aashrita", "Kamath"},
+    {"Sarah", "Delucchi"}, {"Sinan", "Ali"}
+};
+
+string[,] external =
+{
+    {"Vinnie", "Ashton"}, {"Cody", "Dysart"},
+    {"Shay", "Lawrence"}, {"Daren", "Valdes"}
+};
+
+string corporateDomain = "contoso.com";
+string externalDomain = "hayworth.com";
+string domainDomain = "";
+string email = "";
+
+emailAdress(corporate);
+emailAdress(external);
+
+void emailAdress(string[,] domain)
+{
+    domainDomain = (domain == corporate ? corporateDomain : externalDomain);
+    for (int i = 0; i < domain.GetLength(0); i++)
+    {
+        email = domain[i, 0].Substring(0, 2).ToLower() + domain[i, 1].ToLower() + "@" + domainDomain;
+        Console.WriteLine(email);
+    }
+}
+*/
+
+// 총 구매 가격 계산
+double total = 0;
+double minimumSpend = 30.00;
+
+double[] items = {15.97, 3.50, 12.25, 22.99, 10.98};
+double[] discounts = {0.30, 0.00, 0.10, 0.20, 0.50};
+
+Console.WriteLine($"Total: ${total}");
+
+void GetDiscountedPrice(int itemIndex)
+{
+    // Calculate the discounted price of the item
+}
+
+void TotalMeetsMinimum()
+{
+    // Check if the total meets the minimum
+}
+
+void FormatDecimal(double input)
+{
+    // Format the double so only 2 decimal places are displayed
+}
