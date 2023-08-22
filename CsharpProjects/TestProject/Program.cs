@@ -1173,4 +1173,46 @@ int[,] TwoCoins(int[] coins, int target)
     return (count == 0) ? new int[0,0] : result;
 }
 */
+
 // 주사위 미니 게임 과제
+/*
+using System.Reflection.Metadata.Ecma335;
+using System.Runtime;
+
+Random random = new Random();
+
+Console.WriteLine("Would you like to play? (Y/N)");
+if (ShouldPlay())
+{
+    PlayGame();
+}
+
+void PlayGame()
+{
+    var play = true;
+
+    while (play)
+    {
+        int target = random.Next(1, 6);
+        int roll = random.Next(1, 7);
+
+        Console.WriteLine($"Roll a number greater than {target} to win!");
+        Console.WriteLine($"You rolled a {roll}");
+        Console.WriteLine(WinOrLose(target, roll));
+        Console.WriteLine("\nPlay again? (Y/N)");
+
+        play = ShouldPlay();
+    }
+}
+
+bool ShouldPlay() 
+{
+    string response = Console.ReadLine();
+    return response.ToLower().Equals("y");
+}
+
+string WinOrLose(int target, int roll)
+{
+    return (target > roll ? "you lose" : "you win!");
+}
+*/
