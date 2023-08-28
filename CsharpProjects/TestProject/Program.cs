@@ -1217,6 +1217,8 @@ string WinOrLose(int target, int roll)
 }
 */
 
+// 동물원 학교 그룹 별 동물 관람 방식 지정
+/*
 using System;
 
 string[] pettingZoo = 
@@ -1280,3 +1282,4 @@ void PrintGroup(string[,] groups)
         Console.WriteLine();
     }
 }
+*/
